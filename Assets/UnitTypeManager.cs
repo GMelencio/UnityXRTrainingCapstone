@@ -4,24 +4,11 @@ using UnityEngine;
 
 public class UnitTypeManager : MonoBehaviour
 {
-    public Transform GroundUnitSpawn;
     public GameObject PlayerXRRig;
 
-    public void AssignAsGroundUnit()
+    public void AssignAsUnit(GameObject unitType)
     {
-        PlayerXRRig.transform.position = GroundUnitSpawn.position;
-        PlayerXRRig.transform.rotation = GroundUnitSpawn.rotation;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        PlayerXRRig.transform.position = unitType.transform.position;
+        PlayerXRRig.transform.rotation = unitType.transform.rotation;
     }
 }

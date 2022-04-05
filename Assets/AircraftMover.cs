@@ -61,7 +61,7 @@ public class AircraftMover : MonoBehaviour
 
             WaypointIndex++;
             
-            //Debug.Log("Waypoint reached, moving to next waypoint # " + WaypointIndex);
+            Debug.Log(System.String.Format("Waypoint reached by {0}, moving to next waypoint # {1}", this.gameObject.name, WaypointIndex));
         }
         else
             transform.LookAt(NextPosition);
